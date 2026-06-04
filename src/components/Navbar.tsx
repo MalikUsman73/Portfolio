@@ -62,7 +62,18 @@ export default function Navbar() {
     >
       <div className="container navbar__inner">
         <a href="#" className="navbar__logo" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
-          <span className="navbar__logo-badge">MU</span>
+          <img
+            src="/profile.jpg"
+            alt="Malik Usman"
+            style={{
+              width: 36,
+              height: 36,
+              borderRadius: '50%',
+              objectFit: 'cover',
+              objectPosition: 'center top',
+              border: '2px solid rgba(99,102,241,0.6)',
+            }}
+          />
           <span className="navbar__logo-text">
             <span className="navbar__logo-first">Malik</span>
             <span className="navbar__logo-last"> Usman</span>
