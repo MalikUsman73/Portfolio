@@ -7,10 +7,10 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footer__inner">
         <div className="footer__name">
-          Abdullah<span>.</span>
+          Malik<span>.</span>
         </div>
         <p className="footer__copy">
-          © {new Date().getFullYear()} Abdullah Tariq · AI Automation Engineer
+          © {new Date().getFullYear()} Malik Usman · AI Automation Engineer
         </p>
         <div className="footer__socials">
           <a

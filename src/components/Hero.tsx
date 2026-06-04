@@ -41,24 +41,22 @@ export default function Hero() {
           </div>
 
           <h1 ref={headlineRef} className="hero__headline">
-            I Automate<br />
-            Local Businesses<br />
-            with <span className="highlight">AI</span>
+            Production AI<br />
+            Systems That<br />
+            <span className="highlight">Replace Manual Work</span>
           </h1>
 
           <p ref={subRef} className="hero__sub">
-            Custom websites &amp; AI-powered receptionists — built for US local businesses that are ready to grow without growing their team.
+            n8n automation pipelines, voice AI agents, and full-stack platforms — built for real clients, running in production.
           </p>
 
           <div ref={actionsRef} className="hero__actions">
             <a
-              href={PERSONAL.calendly}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={`mailto:${PERSONAL.email}`}
               className="btn btn-primary"
-              id="hero-book-call"
+              id="hero-get-in-touch"
             >
-              Book a Free Call →
+              Get in Touch →
             </a>
             <a
               href="#services"
@@ -71,47 +69,44 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right: Photo */}
+        {/* Right: Avatar card */}
         <div ref={photoRef} className="hero__photo-wrap">
           <div className="hero__photo-card">
             {/* Floating badge 1 */}
             <div className="hero__badge-float hero__badge-float--1">
-              <div className="hero__badge-float-icon">🌐</div>
+              <div className="hero__badge-float-icon">⚙️</div>
               <div>
-                <div style={{ fontSize: 12, color: 'var(--text-muted)', fontWeight: 500 }}>Service</div>
-                <div>Custom Websites</div>
+                <div style={{ fontSize: 12, color: 'var(--text-muted)', fontWeight: 500 }}>Stack</div>
+                <div>n8n · Claude API</div>
               </div>
             </div>
 
-            {/* Photo */}
-            <img
-              src="/profile.jpg"
-              alt="Abdullah Tariq"
+            {/* Initials avatar */}
+            <div
               className="hero__photo-img"
-              onError={(e) => {
-                // Fallback gradient avatar if image missing
-                const el = e.currentTarget;
-                el.style.display = 'none';
-                const parent = el.parentElement!;
-                const fallback = document.createElement('div');
-                fallback.style.cssText = `
-                  position:relative;z-index:1;width:100%;height:100%;border-radius:22px;
-                  background:linear-gradient(135deg,#2563EB,#7C3AED);
-                  display:flex;align-items:center;justify-content:center;
-                  font-family:Sora,sans-serif;font-size:6rem;font-weight:800;color:white;
-                  box-shadow:0 20px 60px rgba(0,0,0,0.14);
-                `;
-                fallback.textContent = 'AT';
-                parent.appendChild(fallback);
+              style={{
+                background: 'linear-gradient(135deg, #2563EB, #7C3AED)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontFamily: 'Sora, sans-serif',
+                fontSize: '6rem',
+                fontWeight: 800,
+                color: 'white',
+                borderRadius: '22px',
+                position: 'relative',
+                zIndex: 1,
               }}
-            />
+            >
+              MU
+            </div>
 
             {/* Floating badge 2 */}
             <div className="hero__badge-float hero__badge-float--2">
-              <div className="hero__badge-float-icon">🤖</div>
+              <div className="hero__badge-float-icon">🎙️</div>
               <div>
-                <div style={{ fontSize: 12, color: 'var(--text-muted)', fontWeight: 500 }}>Service</div>
-                <div>AI Receptionist</div>
+                <div style={{ fontSize: 12, color: 'var(--text-muted)', fontWeight: 500 }}>500+</div>
+                <div>Calls / Month</div>
               </div>
             </div>
           </div>

@@ -62,10 +62,10 @@ export default function Navbar() {
     >
       <div className="container navbar__inner">
         <a href="#" className="navbar__logo" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
-          <span className="navbar__logo-badge">AT</span>
+          <span className="navbar__logo-badge">MU</span>
           <span className="navbar__logo-text">
-            <span className="navbar__logo-first">Abdullah</span>
-            <span className="navbar__logo-last"> Tariq</span>
+            <span className="navbar__logo-first">Malik</span>
+            <span className="navbar__logo-last"> Usman</span>
           </span>
         </a>
 
