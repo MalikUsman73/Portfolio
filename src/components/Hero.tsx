@@ -81,25 +81,26 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Initials avatar */}
-            <div
+            {/* Photo */}
+            <img
+              src="/profile.jpg"
+              alt="Malik Usman"
               className="hero__photo-img"
-              style={{
-                background: 'linear-gradient(135deg, #2563EB, #7C3AED)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontFamily: 'Sora, sans-serif',
-                fontSize: '6rem',
-                fontWeight: 800,
-                color: 'white',
-                borderRadius: '22px',
-                position: 'relative',
-                zIndex: 1,
+              onError={(e) => {
+                const el = e.currentTarget;
+                el.style.display = 'none';
+                const parent = el.parentElement!;
+                const fallback = document.createElement('div');
+                fallback.style.cssText = `
+                  position:relative;z-index:1;width:100%;height:100%;border-radius:22px;
+                  background:linear-gradient(135deg,#2563EB,#7C3AED);
+                  display:flex;align-items:center;justify-content:center;
+                  font-family:Sora,sans-serif;font-size:6rem;font-weight:800;color:white;
+                `;
+                fallback.textContent = 'MU';
+                parent.appendChild(fallback);
               }}
-            >
-              MU
-            </div>
+            />
 
             {/* Floating badge 2 */}
             <div className="hero__badge-float hero__badge-float--2">
