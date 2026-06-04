@@ -1,0 +1,130 @@
+/* =============================================
+   ABDULLAH TARIQ PORTFOLIO — GLOBAL STYLES
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+
+/* ---- CSS VARIABLES ---- */
+:root {
+  --bg:        #F9F8F5;
+  --bg-card:   #FFFFFF;
+  --text:      #1A1A2E;
+  --text-muted: #64748B;
+  --accent:    #2563EB;
+  --accent-2:  #7C3AED;
+  --gold:      #F59E0B;
+  --border:    rgba(0,0,0,0.08);
+  --shadow-sm: 0 2px 12px rgba(0,0,0,0.06);
+  --shadow-md: 0 8px 32px rgba(0,0,0,0.10);
+  --shadow-lg: 0 20px 60px rgba(0,0,0,0.14);
+  --radius:    16px;
+  --radius-sm: 10px;
+  --nav-h:     72px;
+  --font-head: 'Sora', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --max-w:     1180px;
+  --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---- RESET ---- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+/* ---- UTILITY ---- */
+.container {
+  width: 100%;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.section { padding: 110px 0; }
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+.section-label::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+.section-title {
+  font-family: var(--font-head);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.18;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 600px;
+  line-height: 1.75;
+}
+
+/* ---- BUTTONS ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(37,99,235,0.35);
+}
+.btn-primary:hover {
+  background: #1D4ED8;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(37,99,235,0.45);
+}
+.btn-outline {
+  border: 2px solid var(--border);
+  color: var(--text);
+  background: transparent;
+}
+.btn-outline:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+.btn-ghost {
+  color: var(--accent);
+  font-weight: 600;
+  padding: 0;
+}
+.btn-ghost:hover { opacity: 0.75; }
+
+/* ---- SCROLLBAR ---- */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 10px; }
